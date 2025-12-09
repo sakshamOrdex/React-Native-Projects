@@ -15,13 +15,14 @@ const SignupScreen: React.FC<Props> = ({ navigation }) => {
 
       <TextInput
         placeholder="Name"
+        placeholderTextColor='gray'
         style={styles.input}
         value={name}
         onChangeText={setName}
       />
 
-      <TextInput placeholder="Email" style={styles.input} />
-      <TextInput placeholder="Password" style={styles.input} secureTextEntry />
+      <TextInput placeholder="Email" style={styles.input} placeholderTextColor='gray' keyboardType='email-address'/>
+      <TextInput placeholder="Password" style={styles.input} placeholderTextColor='gray' secureTextEntry={true}/>
 
       <TouchableOpacity
         style={styles.button}
@@ -52,9 +53,10 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 8,
     marginBottom: 15,
+    color:'black'
   },
   button: {
-    backgroundColor: '#1cc88a',
+    backgroundColor: '#018790',
     padding: 15,
     borderRadius: 8,
   },
